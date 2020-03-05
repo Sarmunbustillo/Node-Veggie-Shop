@@ -45,8 +45,8 @@ const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8');
 const dataObj = JSON.parse(data);
 
 const server = http.createServer((req, res) => {
-
     
+    //destructure the query and pathname values from the req.url
     const {query, pathname} = url.parse(req.url, true);
 
     //Overview page
